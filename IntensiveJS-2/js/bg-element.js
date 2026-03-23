@@ -1,4 +1,4 @@
-export const setbg = (elem) => {
+export default function setbg(elem) {
     const elList = elem.querySelectorAll('.set-bg')
 
   elList.forEach(element => {

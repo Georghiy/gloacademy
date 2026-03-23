@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-  const modal = document.querySelector('.search-model'),
+
+export default function modal() {
+    const modal = document.querySelector('.search-model'),
     modalBtn = document.querySelector('.icon_search'),
     modalCloseBtn = modal.querySelector('.search-close-switch'),
     modalInput = modal.querySelector('#search-input')
@@ -19,8 +20,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
       // обычно применяется когда к примеру система ищет в БД возможные совпадения и сразу выводит из пользователю
     })
   })
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  modal()
 })
 
 
-// Повесить обработчик события на поле ввода в модальном окне Поиска
-// При вводе данных в поле ввода выводить значение поля в консоль

@@ -19,14 +19,16 @@
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <script defer src="js/preloader.js" type="module"></script>
+  <!-- <script defer src="./js/bg-element.js" type="module"></script> -->
+  <!-- <script defer src="./js/modal.js" type="module"></script> -->
+  <!-- <script defer src="./js/scrollToTop.js" type="module"></script> -->
+  <script defer src="js/slider.js" type="module"></script>
+  <!-- <script defer src="./js/mainData.js" type="module"></script> -->
+  <script defer src="js/index.js" type="module"></script>
 </head>
 
-<script defer src="./js/preloader.js"></script>
-<script defer src="./js/bg-element.js" type="module"></script>
-<script defer src="./js/modal.js"></script>
-<script defer src="./js/scrollToTop.js"></script>
-<script defer src="./js/slider.js"></script>
-<script defer src="./js/mainData.js" type="module"></script>
 
 <body>
   <!-- Page Preloder -->
@@ -49,10 +51,10 @@
                   <div class="header__nav">
                       <nav class="header__menu mobile-menu">
                           <ul>
-                              <li class="active"><a href="./index.html">Homepage</a></li>
-                              <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                              <li class="active"><a href="./index.html">Главная</a></li>
+                              <li><a href="./categories.html">Категории <span class="arrow_carrot-down"></span></a>
                                   <ul class="dropdown">
-                                      <li><a href="./categories.html">Categories</a></li>
+                                      <!-- <li><a href="./categories.html">Categories</a></li> -->
                                   </ul>
                               </li>
                           </ul>
@@ -115,7 +117,7 @@
 
               <div class="hero__slider-pagination swiper-pagination"></div>
               <div class="hero__slider-arrow arrow__next swiper-button-next">
-                  <span class="arrow_carrot-left"></span>
+                  <span class="arrow_carrot-right"></span>
               </div>
               <div class="hero__slider-arrow arrow__prev swiper-button-prev">
                   <span class="arrow_carrot-left"></span>
@@ -139,7 +141,7 @@
                       </div>
                       <div class="col-lg-4 col-md-4 col-sm-4">
                           <div class="btn__all">
-                              <a href="/categories.html" class="primary-btn">View All <span class="arrow_right"></span></a>
+                              <a href="./categories.html" class="primary-btn">View All <span class="arrow_right"></span></a>
                           </div>
                       </div>
                   </div>
@@ -559,7 +561,7 @@
               <div class="product__sidebar">
                   <div class="product__sidebar__view">
                       <div class="section-title">
-                          <h5>Top Views</h5>
+                          <h5>Популярное</h5>
                       </div>
                       <div class="filter__gallery">
                           <div class="product__sidebar__view__item set-bg mix day years"
@@ -616,8 +618,8 @@
         <div class="col-lg-6">
           <div class="footer__nav">
             <ul>
-              <li class="active"><a href="./index.html">Homepage</a></li>
-              <li><a href="./categories.html">Categories</a></li>
+              <li class="active"><a href="./index.html">Главная</a></li>
+              <li><a href="./categories.html">Категории</a></li>
             </ul>
           </div>
         </div>
@@ -641,7 +643,8 @@
 
   <!-- Js Plugins -->
   <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest "></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" type ="module"></script> -->
 </body>
 
 </html>

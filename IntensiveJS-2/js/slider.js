@@ -1,17 +1,19 @@
-document.addEventListener('DOMContentLoaded0', ()=>{
-  const swiper = new Swiper('.swiper',
+document.addEventListener('DOMContentLoaded', ()=>{
+  const slider = new Swiper('.swiper',
     {
       pagination: {
         el: '.swiper-pagination',
       },
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.arrow_carrot-right',
+        prevEl: '.arrow_carrot-left',
       },
       effect: "fade",
       speed: 1000,
     }
   )
+
+
 })
 
