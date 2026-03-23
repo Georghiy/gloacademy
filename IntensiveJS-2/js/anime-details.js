@@ -14,21 +14,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
   modal()
 
   render.fetchData('./db.json').then(data => {
-    const item = data.anime[itemFlag];
+    const item = data.anime.find(animeObj => animeObj.id == itemFlag); // ищем в списке объект содержащий параметр id равный кверу параметру
 
     let breadsCrumbDictionary = breadCrumbOption.dictionary
 
     breadCrumbOption.addCrumbInDictionary(breadsCrumbDictionary, breadCrumbOption.createCrumbObj(item.ganre, `./categories.html?ganre=${item.ganre}`))
     breadCrumbOption.renderBreadCrumbs('.breadcrumb__links', breadsCrumbDictionary, ['main', 'categories', item.ganre, item.title])
-
-    // breadCrumb.innerText = item.ganre
-    // breadsCrumbBlock.insertAdjacentElement('beforeend', breadCrumb)
-
-    let ganreTags = ''
-
-    item.tags.forEach(tag => {
-      ganreTags = ganreTags + tag + `, `
-    });
 
     animeDetailsContentRow.innerHTML = `
       <div class="col-lg-3">
@@ -39,7 +30,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       <div class="col-lg-9">
         <div class="anime__details__text">
           <div class="anime__details__title">
-            <h3>${item.title} / ${item['original-title']}</h3>
+            <h3>${item.title}</h3>
+            <span>${item['original-title']}</span>
           </div>
 
           <p>${item.description}
@@ -51,7 +43,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 <ul>
                   <li><span>Год выхода:</span> ${item.date}</li>
                   <li><span>Рейтинг:</span> ${item.rating}</li>
-                  <li><span>Жанр:</span> ${ganreTags.trim()}</li>
+                  <li><span>Жанр:</span> ${item.tags.join(", ")}</li>
                 </ul>
               </div>
             <div class="col-lg-6 col-md-6">
