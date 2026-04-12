@@ -1,5 +1,4 @@
 export default function modal(switchElList, modalEl) {
-    console.log(switchElList)
     switchElList.forEach((el) => {
         el.addEventListener('click', () => {
             modalEl.classList.remove('hidden')

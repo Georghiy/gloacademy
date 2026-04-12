@@ -2,7 +2,8 @@ import accordion from "./js/accordion.js";
 import tabs from "./js/tabs.js";
 import smoothScroll from "./js/smothscroll.js";
 import modal from "./js/modal.js";
-import burger from "./js/burger.js"
+import burger from "./js/burger.js";
+import form from "./js/form.js"
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const accordionBtnList = document.querySelectorAll('.feature__link'),
@@ -16,14 +17,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
         switchModalList = document.querySelectorAll('.more'),
         modalEl = document.querySelector('.modal'),
         burgerBtn = document.querySelector('.humburger-menu'),
-        menu = document.querySelector('.menu')
+        menu = document.querySelector('.menu'),
+        formList = document.querySelectorAll('.form')
     ;
-
-    console.log(burgerBtn)
 
     accordion(accordionBtnList,accordionItemList)
     tabs(tabsBtnList, tabsContentList)
     smoothScroll(allLinkList)
     modal(switchModalList, modalEl)
     burger(burgerBtn, menu)
+
+    formList.forEach(el=>{
+        el.addEventListener('submit', (event)=> {            
+            event.preventDefault()
+            form(el)
+        })
+
+    })
+    
+    
+
 })
